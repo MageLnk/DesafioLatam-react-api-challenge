@@ -9,10 +9,10 @@ import { Input } from "antd";
 
 const Header = () => {
   const [input, setInput] = useState("");
-  const { apiCall } = useContext(GeneralContext);
+  const { apiSearch } = useContext(GeneralContext);
   const handleSearch = (event) => {
     event.preventDefault();
-    apiCall(input);
+    apiSearch(input);
     setInput("");
   };
   return (
