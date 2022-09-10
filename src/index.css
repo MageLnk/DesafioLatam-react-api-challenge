@@ -43,9 +43,19 @@ a:active {
 .main-content-container .main-content-cards-container {
   margin: 2rem;
 }
+.main-content-container .main-content-cards-container .main-content-card-list {
+  display: flex;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+}
 .main-content-container .main-content-cards-container .main-content-card-sub-title {
   display: flex;
   justify-content: space-between;
+}
+.main-content-container .main-content-cards-container .main-content-card {
+  margin: 0 0.5rem 0 0.5rem;
+  width: 200px;
 }
 .main-content-container
   .main-content-cards-container
@@ -54,7 +64,6 @@ a:active {
   font-size: 0.9rem;
   color: #647380;
 }
-
 .main-content-container .main-content-cards-container h2 {
   font-size: 1.3rem;
   font-weight: 200;
@@ -70,12 +79,13 @@ a:active {
 
 .general-container {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   grid-template-areas:
     "header"
     "main-content"
     "footer";
-  grid-template-rows: 6% 88% 6%;
+  grid-template-rows: 3.5rem 88% 4rem;
   grid-template-columns: 100%;
 }

@@ -7,6 +7,18 @@ import Loading from "../Loading";
 
 const MainContent = () => {
   const { dataOnLoad } = useContext(GeneralContext);
+
+  const topFiveData = ({ data }) => {
+    if (dataOnLoad) {
+      const filterData = data.filter((info, index) => {
+        if (index < 5) {
+          return info;
+        }
+      });
+      return filterData;
+    }
+  };
+
   return (
     <div className="main-content-container">
       <div>
@@ -18,11 +30,14 @@ const MainContent = () => {
           <h2>Lista top animés</h2>
           <span className="main-content-view-more">Ver más...</span>
         </div>
-
-        {!dataOnLoad ? <Loading /> : <ShowCard totalData={dataOnLoad} />}
+        <div className="main-content-card-list">
+          {!dataOnLoad ? <Loading /> : <ShowCard totalData={topFiveData(dataOnLoad)} />}
+        </div>
       </div>
     </div>
   );
 };
 
 export default MainContent;
+
+// Hacer el filter para que entre solo 5
