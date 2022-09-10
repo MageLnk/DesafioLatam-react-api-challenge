@@ -6,12 +6,12 @@ import ShowCard from "./ShowCard";
 import Loading from "../Loading";
 
 const MainContent = () => {
-  const { dataOnLoad } = useContext(GeneralContext);
+  const { dataOnLoad, something } = useContext(GeneralContext);
 
   const topFiveData = ({ data }) => {
     if (dataOnLoad) {
       const filterData = data.filter((info, index) => {
-        if (index < 5) {
+        if (index < 6) {
           return info;
         }
       });

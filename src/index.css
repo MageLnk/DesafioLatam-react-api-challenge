@@ -39,23 +39,18 @@ a:active {
   background-color: #edf1f5;
   color: #acd5f2;
 }
-
 .main-content-container .main-content-cards-container {
   margin: 2rem;
 }
-.main-content-container .main-content-cards-container .main-content-card-list {
-  display: flex;
-  width: 100%;
-  margin: 1rem 0 1rem 0;
-  padding: 0 1rem 0 1rem;
+.main-content-container .main-content-cards-container h2 {
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin: 0;
+  color: #647380;
 }
 .main-content-container .main-content-cards-container .main-content-card-sub-title {
   display: flex;
   justify-content: space-between;
-}
-.main-content-container .main-content-cards-container .main-content-card {
-  margin: 0 0.5rem 0 0.5rem;
-  width: 200px;
 }
 .main-content-container
   .main-content-cards-container
@@ -64,11 +59,40 @@ a:active {
   font-size: 0.9rem;
   color: #647380;
 }
-.main-content-container .main-content-cards-container h2 {
-  font-size: 1.3rem;
-  font-weight: 200;
-  margin: 0;
-  color: #647380;
+.main-content-container .main-content-cards-container .main-content-card-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1rem 0;
+}
+.main-content-container .main-content-cards-container .main-content-card {
+  width: 200px;
+  background: none;
+}
+.main-content-container .main-content-cards-container .main-content-card .ant-card-body {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  font-size: 1rem;
+}
+.main-content-container .main-content-cards-container .main-content-card .main-content-card-img {
+  height: 310px;
+}
+.popover-container {
+  width: 18.3rem;
+  margin: 1rem;
+}
+.popover-licensors-container {
+  display: flex;
+  justify-content: space-between;
+}
+.popover-container .popover-genres-container {
+  margin-top: 1.6rem;
+}
+.popover-seasson-and-population-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 1rem 0 1rem 0;
 }
 
 .footer-container {
@@ -86,6 +110,6 @@ a:active {
     "header"
     "main-content"
     "footer";
-  grid-template-rows: 3.5rem 88% 4rem;
+  grid-template-rows: 3.5rem 94% 4rem;
   grid-template-columns: 100%;
 }

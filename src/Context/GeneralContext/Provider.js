@@ -6,7 +6,6 @@ import miApi from "../miApi";
 
 const GeneralContextProvider = ({ children }) => {
   const [dataOnLoad, setDataOnLoad] = useState("");
-  const [logIn, setLogIn] = useState(false);
 
   const apiSearch = async (anime) => {
     const data = await miApi({ url: `https://api.jikan.moe/v4/anime?q=${anime}&sfw` });
@@ -23,8 +22,17 @@ const GeneralContextProvider = ({ children }) => {
     }
   };
 
+  const something = async () => {
+    try {
+      const data = await miApi({ url: `https://api.jikan.moe/v4/seasons/now` });
+      console.log("Viendo el something", data);
+    } catch (error) {
+      alert("Ha ocurrido un error. Recarga la página");
+    }
+  };
+
   return (
-    <GeneralContext.Provider value={{ logIn, setLogIn, loadTopAnimes, apiSearch, dataOnLoad }}>
+    <GeneralContext.Provider value={{ dataOnLoad, loadTopAnimes, apiSearch, something }}>
       {children}
     </GeneralContext.Provider>
   );
