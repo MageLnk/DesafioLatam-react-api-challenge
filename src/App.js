@@ -1,12 +1,17 @@
-//import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Context
-//import GeneralContext from "./Context/GeneralContext";
+import GeneralContext from "./Context/GeneralContext";
 // Components
 import { Home } from "./pages";
 
 const App = () => {
-  //const { logIn } = useContext(GeneralContext);
+  const { apiCall } = useContext(GeneralContext);
+
+  useEffect(() => {
+    apiCall();
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>

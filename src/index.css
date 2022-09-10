@@ -1,4 +1,39 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Allura", cursive;
+  font-family: "Lato", sans-serif;
+}
+
+.header-container {
+  grid-area: header;
+  background-color: #2b2d42;
+  color: #bcbedc;
+}
+
+.content-container {
+  grid-area: main-content;
+  background-color: #edf1f5;
+  color: #acd5f2;
+}
+.title {
+  color: #f0f3f6;
+}
+
+.footer-container {
+  grid-area: footer;
+  background-color: #11161d;
+  color: #a0b1c5;
+}
+
+.general-container {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-areas:
+    "header"
+    "main-content"
+    "footer";
+  grid-template-rows: 6% 88% 6%;
+  grid-template-columns: 100%;
 }
