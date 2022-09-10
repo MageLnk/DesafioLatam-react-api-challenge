@@ -6,6 +6,13 @@ body {
   font-family: "Allura", cursive;
   font-family: "Lato", sans-serif;
 }
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
 .header-container {
   grid-area: header;
@@ -27,13 +34,32 @@ body {
   border-radius: 6px;
 }
 
-.content-container {
+.main-content-container {
   grid-area: main-content;
   background-color: #edf1f5;
   color: #acd5f2;
 }
-.title {
-  color: #f0f3f6;
+
+.main-content-container .main-content-cards-container {
+  margin: 2rem;
+}
+.main-content-container .main-content-cards-container .main-content-card-sub-title {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content-container
+  .main-content-cards-container
+  .main-content-card-sub-title
+  .main-content-view-more {
+  font-size: 0.9rem;
+  color: #647380;
+}
+
+.main-content-container .main-content-cards-container h2 {
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin: 0;
+  color: #647380;
 }
 
 .footer-container {

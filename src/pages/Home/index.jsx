@@ -1,13 +1,11 @@
 // Components
-import { Header } from "../../Components/";
+import { Header, MainContent } from "../../Components/";
 
 const Home = () => {
   return (
     <div className="general-container">
       <Header />
-      <div className="content-container">
-        <span>Content</span>
-      </div>
+      <MainContent />
       <div className="footer-container">
         <span>Footer</span>
       </div>

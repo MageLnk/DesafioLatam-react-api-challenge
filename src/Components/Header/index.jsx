@@ -17,7 +17,7 @@ const Header = () => {
   };
   return (
     <div className="header-container">
-      <div className="header-logo">{<SiMyanimelist viewBox="0 0 24 18" />}</div>
+      <div className="header-logo">{<SiMyanimelist viewBox="0 0 24 14" />}</div>
       <div className="header-input">
         <form typeof="submit" onSubmit={(e) => handleSearch(e)}>
           <Input
