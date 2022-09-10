@@ -7,7 +7,7 @@ import miApi from "../miApi";
 const GeneralContextProvider = ({ children }) => {
   const [logIn, setLogIn] = useState(false);
 
-  const apiCall = async () => {
+  const apiCall = async (anime) => {
     const data = await miApi({ url: `https://api.jikan.moe/v4/anime?q=Dragon ball&sfw` });
     console.log("Algo", data);
     return data;

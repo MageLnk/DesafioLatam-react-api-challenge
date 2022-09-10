@@ -1,9 +1,10 @@
+// Components
+import { Header } from "../../Components/";
+
 const Home = () => {
   return (
     <div className="general-container">
-      <div className="header-container">
-        <span>Header</span>
-      </div>
+      <Header />
       <div className="content-container">
         <span>Content</span>
       </div>

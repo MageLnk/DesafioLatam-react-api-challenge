@@ -1,3 +1,5 @@
+@import "~antd/dist/antd.css";
+
 body {
   padding: 0;
   margin: 0;
@@ -9,6 +11,20 @@ body {
   grid-area: header;
   background-color: #2b2d42;
   color: #bcbedc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+}
+.header-container .header-logo {
+  width: 40%;
+  font-size: 40px;
+}
+.header-container .header-input {
+  width: 20%;
+}
+.header-container .header-input .ant-input-affix-wrapper {
+  border-radius: 6px;
 }
 
 .content-container {
