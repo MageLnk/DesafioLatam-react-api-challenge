@@ -4,6 +4,7 @@ import GeneralContext from "../../Context/GeneralContext";
 // Components
 import ShowCard from "./ShowCard";
 import Loading from "../Loading";
+import { Link } from "react-router-dom";
 
 const MainContent = () => {
   const { dataTopOnLoad, dataSeasonOnLoad, dataSearchIt } = useContext(GeneralContext);
@@ -35,7 +36,9 @@ const MainContent = () => {
       <div className="main-content-cards-container">
         <div className="main-content-card-sub-title">
           <h2>Lista top animés</h2>
-          <span className="main-content-view-more">Ver más...</span>
+          <span className="main-content-view-more">
+            <Link to="anime/top/list">Ver más...</Link>
+          </span>
         </div>
         <div className="main-content-card-list">
           {!dataTopOnLoad ? <Loading /> : <ShowCard totalData={topFiveData(dataTopOnLoad)} />}

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GeneralContext from "./Context/GeneralContext";
 // Components
 import { Home, ViewMore } from "./pages";
+// 404
 import Error404 from "./pages/404";
 
 const App = () => {
