@@ -66,9 +66,3 @@ const ShowCard = ({ totalData }) => {
 };
 
 export default ShowCard;
-
-/*
-
-Corregir la entrega el map, cosa que reciba directamente el arreglo y ya
-
-*/

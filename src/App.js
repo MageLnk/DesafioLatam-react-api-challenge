@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Context
 import GeneralContext from "./Context/GeneralContext";
 // Components
-import { Home } from "./pages";
+import { Home, ViewMore } from "./pages";
+import Error404 from "./pages/404";
 
 const App = () => {
   const { loadData } = useContext(GeneralContext);
@@ -16,6 +17,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/anime/:id/list" element={<ViewMore />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );

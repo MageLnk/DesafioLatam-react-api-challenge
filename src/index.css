@@ -117,3 +117,14 @@ a:active {
   grid-template-rows: 3.5rem 94% 4rem;
   grid-template-columns: 100%;
 }
+
+.error-404-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error-404-container .error-404-menssage {
+  font-size: 46px;
+  font-weight: 400;
+}

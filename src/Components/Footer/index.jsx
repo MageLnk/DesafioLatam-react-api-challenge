@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <span>
-        Página creada a petición de D.Latam para una prueba de React. Manejo de Api y otras
-        virtudes. <BiRegistered />
+        Página creada por MageLink a petición de D.Latam para una prueba de React. Manejo de Api y
+        otras virtudes. <BiRegistered />
       </span>
     </div>
   );
