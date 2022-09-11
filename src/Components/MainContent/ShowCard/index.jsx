@@ -3,6 +3,7 @@ import { Card, Popover, Button } from "antd";
 import { FaRegSmile } from "react-icons/fa";
 
 const ShowCard = ({ totalData }) => {
+  console.log(totalData);
   const mapData = totalData.map((info) => {
     const genres = info.genres.map((info) => {
       return (
@@ -62,7 +63,7 @@ const ShowCard = ({ totalData }) => {
     );
   });
 
-  return <>{totalData && mapData}</>;
+  return <>{totalData.length === 0 ? <span>No hay resultados</span> : mapData}</>;
 };
 
 export default ShowCard;

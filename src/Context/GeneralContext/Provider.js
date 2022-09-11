@@ -12,6 +12,7 @@ const GeneralContextProvider = ({ children }) => {
   const apiSearch = async (anime) => {
     try {
       const data = await miApi({ url: `https://api.jikan.moe/v4/anime?q=${anime}&sfw` });
+      //console.log(data.data);
       setDataSearchIt(data);
     } catch (error) {
       alert("Ha ocurrido un error. Recarga la página");
