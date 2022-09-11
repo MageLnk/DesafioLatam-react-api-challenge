@@ -99,6 +99,10 @@ a:active {
   grid-area: footer;
   background-color: #11161d;
   color: #a0b1c5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
 }
 
 .general-container {

@@ -1,14 +1,12 @@
 // Components
-import { Header, MainContent } from "../../Components/";
+import { Header, MainContent, Footer } from "../../Components/";
 
 const Home = () => {
   return (
     <div className="general-container">
       <Header />
       <MainContent />
-      <div className="footer-container">
-        <span>Footer</span>
-      </div>
+      <Footer />
     </div>
   );
 };
