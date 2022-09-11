@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 // Context
 import GeneralContext from "../../Context/GeneralContext";
 // Icon
@@ -17,7 +18,13 @@ const Header = () => {
   };
   return (
     <div className="header-container">
-      <div className="header-logo">{<SiMyanimelist viewBox="0 0 24 14" />}</div>
+      <div className="header-logo">
+        {
+          <Link to={"/"}>
+            <SiMyanimelist viewBox="0 0 24 14" />
+          </Link>
+        }
+      </div>
       <div className="header-input">
         <form typeof="submit" onSubmit={(e) => handleSearch(e)}>
           <Input
