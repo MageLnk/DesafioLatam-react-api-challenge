@@ -6,10 +6,10 @@ import GeneralContext from "./Context/GeneralContext";
 import { Home } from "./pages";
 
 const App = () => {
-  const { loadTopAnimes } = useContext(GeneralContext);
+  const { loadData } = useContext(GeneralContext);
 
   useEffect(() => {
-    loadTopAnimes();
+    loadData();
   }, []);
 
   return (

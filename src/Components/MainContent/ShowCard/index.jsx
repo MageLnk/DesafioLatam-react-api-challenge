@@ -42,7 +42,6 @@ const ShowCard = ({ totalData }) => {
         <div className="popover-genres-container">{genres}</div>
       </div>
     );
-    console.log("Viendo el info", info);
     // Return map card
     return (
       <Popover key={info.mal_id} content={popOverContent} placement="rightTop">
@@ -63,7 +62,7 @@ const ShowCard = ({ totalData }) => {
     );
   });
 
-  return <>{mapData}</>;
+  return <>{totalData && mapData}</>;
 };
 
 export default ShowCard;
