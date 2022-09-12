@@ -102,6 +102,9 @@ a:active {
   display: flex;
   justify-content: space-between;
 }
+.view-more-container .view-more-cards-container {
+  padding: 1rem;
+}
 
 .footer-container {
   grid-area: footer;

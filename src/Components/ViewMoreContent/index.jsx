@@ -1,4 +1,12 @@
+import { useContext } from "react";
+// Context
+import GeneralContext from "../../Context/GeneralContext";
+// Components
+
 const ViewMoreContent = () => {
+  const { dataTopOnLoad } = useContext(GeneralContext);
+
+  console.log("Viendo el dataTopOnLoad", dataTopOnLoad);
   return (
     <div className="main-content-container">
       <div className="view-more-container">
@@ -9,7 +17,7 @@ const ViewMoreContent = () => {
             <span>Filtro 2</span>
           </div>
         </div>
-        <div>
+        <div className="view-more-cards-container">
           <span>Cartas container</span>
         </div>
       </div>
