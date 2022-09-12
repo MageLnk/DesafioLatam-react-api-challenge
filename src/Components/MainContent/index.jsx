@@ -2,7 +2,7 @@ import { useContext } from "react";
 // Context
 import GeneralContext from "../../Context/GeneralContext";
 // Components
-import ShowCard from "./ShowCard";
+import ShowCard from "../ShowCard";
 import Loading from "../Loading";
 import { Link } from "react-router-dom";
 

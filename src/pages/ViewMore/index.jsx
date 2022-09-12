@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 // Components
-import { Header, Footer } from "../../Components/";
+import { Header, Footer, ViewMoreContent } from "../../Components/";
 
 const ViewMore = () => {
   const params = useParams();
@@ -8,9 +8,7 @@ const ViewMore = () => {
   return (
     <div className="general-container">
       <Header />
-      <div className="main-content-container">
-        <span>Esto va a cambiar</span>
-      </div>
+      <ViewMoreContent />
       <Footer />
     </div>
   );

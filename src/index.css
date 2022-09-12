@@ -95,6 +95,14 @@ a:active {
   margin: 1rem 0 1rem 0;
 }
 
+.view-more-container {
+  margin: 2rem;
+}
+.view-more-container .view-more-filters-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-container {
   grid-area: footer;
   background-color: #11161d;
