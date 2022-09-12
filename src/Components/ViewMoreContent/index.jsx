@@ -2,11 +2,23 @@ import { useContext } from "react";
 // Context
 import GeneralContext from "../../Context/GeneralContext";
 // Components
+import { Loading, ShowCard } from "../index";
 
 const ViewMoreContent = () => {
   const { dataTopOnLoad } = useContext(GeneralContext);
 
-  console.log("Viendo el dataTopOnLoad", dataTopOnLoad);
+  console.log("Viendo el dataTopOnLoad", dataTopOnLoad.data);
+
+  const topFiveData = ({ data }) => {
+    if (dataTopOnLoad) {
+      const filterData = data.filter((info, index) => {
+        if (index < 6) {
+          return info;
+        }
+      });
+      return filterData;
+    }
+  };
   return (
     <div className="main-content-container">
       <div className="view-more-container">
@@ -18,7 +30,7 @@ const ViewMoreContent = () => {
           </div>
         </div>
         <div className="view-more-cards-container">
-          <span>Cartas container</span>
+          {!dataTopOnLoad ? <Loading /> : <ShowCard totalData={dataTopOnLoad.data} />}
         </div>
       </div>
     </div>

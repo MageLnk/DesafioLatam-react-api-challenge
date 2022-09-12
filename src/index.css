@@ -64,16 +64,17 @@ a:active {
   justify-content: space-between;
   margin: 1rem 0 1rem 0;
 }
-.main-content-container .main-content-cards-container .main-content-card {
+
+.main-content-card {
   width: 200px;
   background: none;
 }
-.main-content-container .main-content-cards-container .main-content-card .ant-card-body {
+.main-content-card .ant-card-body {
   margin: 0.5rem 0 0 0;
   padding: 0;
   font-size: 1rem;
 }
-.main-content-container .main-content-cards-container .main-content-card .main-content-card-img {
+.main-content-card .main-content-card-img {
   height: 310px;
 }
 .popover-container {
@@ -98,12 +99,18 @@ a:active {
 .view-more-container {
   margin: 2rem;
 }
+.view-more-container .main-content-card {
+  margin: 0.5rem 0 0.5rem 0;
+}
 .view-more-container .view-more-filters-container {
   display: flex;
   justify-content: space-between;
 }
 .view-more-container .view-more-cards-container {
-  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1rem 0;
+  flex-wrap: wrap;
 }
 
 .footer-container {
