@@ -99,12 +99,40 @@ a:active {
 .view-more-container {
   margin: 2rem;
 }
+.view-more-container .view-more-title {
+  color: #647380;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
 .view-more-container .main-content-card {
   margin: 0.5rem 0 0.5rem 0;
 }
 .view-more-container .view-more-filters-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.view-more-container .view-more-filters-container .view-more-filters {
+  padding: 1rem;
+}
+.view-more-container .view-more-filters-container .view-more-filters .view-more-filter {
+  margin: 1rem 0 1rem 0.5rem;
+  cursor: pointer;
+}
+.view-more-container
+  .view-more-filters-container
+  .view-more-filters
+  .view-more-filter
+  .view-more-icon-filter {
+  font-size: 20px;
+}
+.view-more-container
+  .view-more-filters-container
+  .view-more-filters
+  .view-more-filter
+  .view-more-icon-filter-rotate {
+  font-size: 20px;
+  transform: rotate(180deg);
 }
 .view-more-container .view-more-cards-container {
   display: flex;
