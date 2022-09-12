@@ -12,6 +12,7 @@ const App = () => {
 
   useEffect(() => {
     loadData();
+    //console.log("Dile no a Linux");
   }, []);
 
   return (

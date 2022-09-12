@@ -35,7 +35,7 @@ const Filters = ({ filteringData }) => {
           className="view-more-filter"
           onClick={() => {
             setTopFilterData(!topFilterData);
-            filteringData({ topFilterData, selection: "Top" });
+            filteringData({ selected: topFilterData, selection: "Top" });
             fixFilters({ selection: "Top" });
           }}
         >
@@ -49,7 +49,7 @@ const Filters = ({ filteringData }) => {
           className="view-more-filter"
           onClick={() => {
             setNameFilterData(!nameFilterNada);
-            filteringData({ nameFilterNada, selection: "Name" });
+            filteringData({ selected: nameFilterNada, selection: "Name" });
             fixFilters({ selection: "Name" });
           }}
         >
@@ -63,7 +63,7 @@ const Filters = ({ filteringData }) => {
           className="view-more-filter"
           onClick={() => {
             setYearFilterData(!YearFilterNada);
-            filteringData({ YearFilterNada, selection: "Year" });
+            filteringData({ selected: YearFilterNada, selection: "Year" });
             fixFilters({ selection: "Year" });
           }}
         >
