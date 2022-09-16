@@ -11,6 +11,9 @@ const MainContent = () => {
 
   const topFiveData = ({ data }) => {
     if (dataTopOnLoad && dataSeasonOnLoad) {
+      console.log("Datatop", dataTopOnLoad);
+      console.log("DataSeasson", dataSeasonOnLoad);
+
       const filterData = data.filter((info, index) => {
         if (index < 6) {
           return info;

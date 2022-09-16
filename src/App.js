@@ -8,13 +8,6 @@ import { Home, ViewMore } from "./pages";
 import Error404 from "./pages/404";
 
 const App = () => {
-  const { loadData } = useContext(GeneralContext);
-
-  useEffect(() => {
-    loadData();
-    //console.log("Dile no a Linux");
-  }, []);
-
   return (
     <BrowserRouter>
       <Routes>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // Context
 import GeneralContext from "./";
 // Utilities
@@ -29,6 +29,13 @@ const GeneralContextProvider = ({ children }) => {
       alert("Ha ocurrido un error. Recarga la página");
     }
   };
+
+  useEffect(() => {
+    console.log("Viendo cuantas veces");
+    loadData();
+    //console.log("Dile no a Linux");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <GeneralContext.Provider

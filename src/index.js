@@ -9,9 +9,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <GeneralContext>
-      <App />
-    </GeneralContext>
-  </React.StrictMode>
+  <GeneralContext>
+    <App />
+  </GeneralContext>
 );

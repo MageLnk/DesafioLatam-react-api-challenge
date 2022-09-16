@@ -1,3 +1,5 @@
+// MiApi.jsx
+
 const miApi = async ({ url, method = "get", body, headers }) => {
   try {
     const response = await fetch(url, { method, body, headers });
