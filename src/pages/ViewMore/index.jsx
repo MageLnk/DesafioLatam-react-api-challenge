@@ -75,10 +75,10 @@ const ViewMore = () => {
       } else if (selection === "Year") {
         resultado = sortData(dataSearchIt, selected, "year");
       }
-    }
-    if (!dataSearchIt) {
-      // Para proteger el error en el setFilterData en caso que no haya dataSearchIt
-      return;
+      if (!dataSearchIt) {
+        // Para proteger el error en el setFilterData en caso que no haya dataSearchIt
+        return;
+      }
     }
     setFilterData([...resultado]);
   };
