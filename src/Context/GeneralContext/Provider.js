@@ -31,9 +31,8 @@ const GeneralContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log("Viendo cuantas veces");
     loadData();
-    //console.log("Dile no a Linux");
+    console.log("Dile no a Linux");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

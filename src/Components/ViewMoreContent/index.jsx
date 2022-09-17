@@ -9,6 +9,7 @@ const ViewMoreContent = () => {
   const { dataTopOnLoad } = useContext(GeneralContext);
 
   const sortData = (dataToSort, selected, infoToSort) => {
+    // Si es "true", de mayor a menor
     const result = dataToSort.data.sort((a, b) => {
       if (selected === true) {
         if (a[infoToSort] > b[infoToSort]) {
@@ -33,7 +34,6 @@ const ViewMoreContent = () => {
   };
 
   const filteringData = ({ selected, selection }) => {
-    // Si es "true", de mayor a menor
     let resultado = dataTopOnLoad;
     if (selection === "Top") {
       resultado = sortData(dataTopOnLoad, selected, "score");
@@ -65,8 +65,3 @@ const ViewMoreContent = () => {
 };
 
 export default ViewMoreContent;
-
-//
-//
-//
-//

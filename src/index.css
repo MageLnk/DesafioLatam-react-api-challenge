@@ -71,7 +71,7 @@ a:active {
 }
 .main-content-card .ant-card-body {
   margin: 0.5rem 0 0 0;
-  padding: 0;
+  padding: 0 0.15rem 0 0.15rem;
   font-size: 1rem;
 }
 .main-content-card .main-content-card-img {

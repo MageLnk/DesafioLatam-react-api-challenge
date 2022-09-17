@@ -1,7 +1,4 @@
-import { useContext, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// Context
-import GeneralContext from "./Context/GeneralContext";
 // Components
 import { Home, ViewMore } from "./pages";
 // 404
