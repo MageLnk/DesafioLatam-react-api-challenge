@@ -13,10 +13,14 @@ const ViewMore = () => {
 
   const [filterData, setFilterData] = useState([]);
   const [validParamsId, setValidParamsId] = useState(false);
-  const { dataTopOnLoad, dataSeasonOnLoad } = useContext(GeneralContext);
+  const { dataTopOnLoad, dataSeasonOnLoad, dataSearchIt } = useContext(GeneralContext);
 
   const sortData = (dataToSort, selected, infoToSort) => {
     // Si es "true", de mayor a menor
+    if (!dataToSort) {
+      // Para proteger el error en el setFilterData en caso que no haya dataSearchIt
+      return;
+    }
     const result = dataToSort.data.sort((a, b) => {
       if (selected === true) {
         if (a[infoToSort] > b[infoToSort]) {
@@ -62,18 +66,32 @@ const ViewMore = () => {
         resultado = sortData(dataSeasonOnLoad, selected, "year");
       }
     }
+    if (idParams === "search") {
+      resultado = dataSearchIt;
+      if (selection === "Top") {
+        resultado = sortData(dataSearchIt, selected, "score");
+      } else if (selection === "Name") {
+        resultado = sortData(dataSearchIt, selected, "title");
+      } else if (selection === "Year") {
+        resultado = sortData(dataSearchIt, selected, "year");
+      }
+    }
+    if (!dataSearchIt) {
+      // Para proteger el error en el setFilterData en caso que no haya dataSearchIt
+      return;
+    }
     setFilterData([...resultado]);
   };
 
   useEffect(() => {
-    if (dataTopOnLoad || dataSeasonOnLoad) {
+    if (dataTopOnLoad || dataSeasonOnLoad || dataSearchIt) {
       filteringData({ selected: true, selection: "Top" });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dataTopOnLoad]);
+  }, [dataTopOnLoad, dataSeasonOnLoad, dataSearchIt]);
 
   useEffect(() => {
-    if (idParams === "top" || idParams === "season") {
+    if (idParams === "top" || idParams === "season" || idParams === "search") {
       setValidParamsId(true);
     } else {
       navigate("error");

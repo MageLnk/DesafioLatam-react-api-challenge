@@ -26,7 +26,9 @@ const MainContent = () => {
         <div className="main-content-cards-container">
           <div className="main-content-card-sub-title">
             <h2>Resultado</h2>
-            <span className="main-content-view-more">Ver más...</span>
+            <span className="main-content-view-more">
+              <Link to="anime/search/list">Ver más...</Link>
+            </span>
           </div>
           <div className="main-content-card-list">
             {!dataSearchIt ? <Loading /> : <ShowCard totalData={topFiveData(dataSearchIt)} />}
