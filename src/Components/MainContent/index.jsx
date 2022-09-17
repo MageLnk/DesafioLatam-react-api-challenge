@@ -47,7 +47,9 @@ const MainContent = () => {
       <div className="main-content-cards-container">
         <div className="main-content-card-sub-title">
           <h2>Animés de la temporada</h2>
-          <span className="main-content-view-more">Ver más...</span>
+          <span className="main-content-view-more">
+            <Link to="anime/season/list">Ver más...</Link>
+          </span>
         </div>
         <div className="main-content-card-list">
           {!dataSeasonOnLoad ? <Loading /> : <ShowCard totalData={topFiveData(dataSeasonOnLoad)} />}
